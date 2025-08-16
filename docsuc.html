@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصص النجاح - مركز علاج الإدمان</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #7B1FA2;
+            --light-bg: #f5f6f8;
+            --dark-bg: #1e1e1e;
+            --light-text: #666;
+            --dark-text: #eee;
+            --card-bg-light: #fff;
+            --card-bg-dark: #2c2c2c;
+            --accent-color: #2196F3;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-top: 10px;
+        }
+
+        /* Dark/Light Toggle */
+        .toggle-switch {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--card-bg-light);
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.5s;
+        }
+
+        .toggle-switch i {
+            color: var(--primary-color);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg-light);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1 1 200px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: background-color 0.5s;
+        }
+
+        .stat-card h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 1rem;
+            color: var(--light-text);
+        }
+
+        /* Success Stories */
+        .stories {
+            margin: 50px 0;
+        }
+
+        .stories h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .story-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .story-card {
+            background-color: var(--card-bg-light);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, background-color 0.5s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .story-card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .story-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .story-card p {
+            font-size: 1rem;
+            color: var(--light-text);
+        }
+
+        /* Responsive */
+        @media(max-width: 768px){
+            header h1 { font-size: 2.5rem; }
+            .stats { flex-direction: column; }
+        }
+
+        /* Dark Mode */
+        body.dark {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        body.dark .card-bg-light {
+            background-color: var(--card-bg-dark);
+        }
+
+        body.dark .toggle-switch {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-switch" onclick="toggleDarkMode()">
+        <i class="fas fa-adjust"></i> تبديل الوضع
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>قصص النجاح</h1>
+            <p>نفتخر بمساعدة مرضانا على استعادة حياتهم وتحقيق التعافي التام.</p>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-card">
+                <h2>1200+</h2>
+                <p>مريض تم شفاؤهم</p>
+            </div>
+            <div class="stat-card">
+                <h2>95%</h2>
+                <p>نسبة النجاح</p>
+            </div>
+            <div class="stat-card">
+                <h2>15</h2>
+                <p>سنة خبرة</p>
+            </div>
+            <div class="stat-card">
+                <h2>50+</h2>
+                <p>فريق متخصص</p>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="stories">
+            <h2>تجارب حقيقية لمرضانا</h2>
+            <div class="story-cards">
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/400x250" alt="قصة نجاح 1">
+                    <h3>أحمد م.</h3>
+                    <p>تمكنت من التغلب على الإدمان والعودة لحياة طبيعية بفضل المركز وفريقه المتخصص.</p>
+                </div>
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/400x250" alt="قصة نجاح 2">
+                    <h3>منى س.</h3>
+                    <p>التعافي هنا كان تجربة حياتية رائعة، تعلمت التعامل مع التحديات بطريقة صحية.</p>
+                </div>
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/400x250" alt="قصة نجاح 3">
+                    <h3>خالد ر.</h3>
+                    <p>الفريق الطبي في المركز قدم الدعم الكامل خلال رحلة التعافي، وكانت النتائج مذهلة.</p>
+                </div>
+                <div class="story-card">
+                    <img src="https://via.placeholder.com/400x250" alt="قصة نجاح 4">
+                    <h3>ليلى ف.</h3>
+                    <p>أنصح أي شخص يواجه مشكلة الإدمان بالقدوم إلى هذا المركز، فقد غير حياتي بالكامل.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
