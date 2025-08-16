@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دكتور عوض الفرجاني - مركز علاج الإدمان AL-SALAMAT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -59,20 +61,48 @@ header .mode-toggle:hover {opacity: 0.8;}
 /* Hero Section */
 .hero {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588776814546-7d94deec1b4c?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+    justify-content: space-between;
+    padding: 60px 50px;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
     color: white;
-    text-align: center;
-    padding: 0 20px;
+    flex-wrap: wrap; /* عشان يبقى متجاوب مع الموبايل */
 }
-.hero-content {max-width: 800px; text-align:center;}
-.hero h2 {font-size: 3rem; margin-bottom: 15px;}
-.hero p {font-size: 1.2rem; margin-bottom: 25px;}
-.hero .btn {background-color: var(--secondary-color); color: white; padding: 12px 25px; font-size: 1rem; border-radius: 5px; transition: 0.3s;}
-.hero .btn:hover {opacity:0.9;}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: white;
+    color: #4CAF50;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #333;
+    color: white;
+}
+
+.hero-image img {
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 
 /* Features */
 .features {
@@ -124,11 +154,18 @@ header .mode-toggle:hover {opacity: 0.8;}
     color: var(--primary-color);
     margin-bottom: 15px;
 }
+.session-card img{
+width: 100%;
+height: 200px;
+margin-top: 0;
+border-radius: 4px;
+}
 .session-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 .session-card p {color: var(--light-text);}
+
 .session-card:hover {transform: translateY(-10px);}
 
 /* Timeline */
@@ -233,6 +270,283 @@ footer {
     border: none;
     border-radius: 6px;
 }
+.hero-social a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--primary-color);
+    font-size: 2rem;
+    transition: 0.3s;
+}
+.hero-social a:hover {
+    color: #f39c12;
+}
+.hero-full {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* الشاشة كاملة */
+    background: url("WhatsApp Image 2025-08-16 at 7.16.10 PM.jpeg") no-repeat center center/cover;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+/* أيقونة الهاتف في النص */
+.phone-icon {
+    font-size: 4rem;
+    color: white;
+    background: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+margin-top: 50px;
+}
+.phone-icon:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* زرار الجلسات تحت يمين */
+.hero-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+body.dark-mode .therapy-section{
+      background-color: var(--video-container-bg-dark); /* يغير الخلفية للون الداكن */
+
+}
+
+
+.therapy-section{
+          max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+}
+
+.content-wrapper {
+  max-height: 250px; /* يظهر جزء صغير */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.content-wrapper.show {
+  max-height: 2000px; /* يفتح المحتوى بالكامل */
+}
+
+.read-more-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 28px;
+      font-size: 16px;
+      background: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+      background: #00796b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.dark-mode .section{
+      background-color: var(--video-container-bg-dark); /* يغير الخلفية للون الداكن */
+
+}
+
+
+
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    /* صور الجاليري */
+   .section .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+   .section .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* النص */
+   .section .content {
+      max-height: 280px; /* الجزء الظاهر الأول */
+      overflow: hidden;
+      transition: max-height 0.6s ease;
+    }
+   .section .content.show {
+      max-height: 3000px; /* يخلي النص كله يبان */
+    }
+
+    /* زر عرض المزيد */
+  .section  .toggle-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 28px;
+      font-size: 16px;
+      background: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+   .section .toggle-btn:hover {
+      background: #00796b;
+    }
+
+
+
+
+
+
+
+
+
+
+.video-container {
+  display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center;     /* توسيط عمودي */
+  height: 100vh;           /* ارتفاع الصفحة بالكامل */
+  background: #f9f9f9;     /* خلفية فاتحة (اختياري) */
+}
+
+.video-container video {
+  max-width: 80%;  /* الفيديو مايزيدش عن 80% من عرض الشاشة */
+  max-height: 80%; /* الفيديو مايزيدش عن 80% من ارتفاع الشاشة */
+  border-radius: 15px; /* زوايا ناعمة (اختياري) */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* ظل جميل */
+}
+
+/* ستايل الـ video-container لما يكون الدارك مود شغال */
+body.dark-mode .video-container {
+  background-color: var(--video-container-bg-dark); /* يغير الخلفية للون الداكن */
+}
+
+/* لو عايز تخلي الفيديو نفسه يبقى أغمق (اختياري) */
+body.dark-mode .video-container video {
+  filter: brightness(0.7); /* يقلل السطوع بنسبة 30% */
+}
+
+
+
+
+
+
+
+
+
+
+
+body.dark-mode .family-therapy-section{
+      background-color: var(--video-container-bg-dark); /* يغير الخلفية للون الداكن */
+
+}
+
+
+.family-therapy-section{
+              max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+}
+
+
+.family-wrapper {
+  max-height: 250px; /* بيظهر جزء صغير بس */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.family-wrapper.show {
+  max-height: 2000px; /* يفتح المحتوى بالكامل */
+}
+
+.family-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 28px;
+      font-size: 16px;
+      background: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+}
+
+.family-btn:hover {
+      background: #00796b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive */
 @media (max-width:768px){
     header {flex-direction: column; gap:10px; text-align:center;}
@@ -240,23 +554,434 @@ footer {
     .hero p {font-size:1rem;}
     .features, .sessions {padding:40px 20px;}
     .timeline, .testimonials, .faq {padding:40px 20px;}
+    .hero-full {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* الشاشة كاملة */
+    background: url("WhatsApp Image 2025-08-16 at 7.16.10 PM.jpeg") no-repeat center center/cover;
+
+}
+.phone-icon {
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-top: 100px;
+
+}
 }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>مركز عوض لعلاج الإدمان</h1>
+    <h1>مركز نيو لايف لعلاج الإدمان</h1>
     <button class="mode-toggle" id="modeToggle">تبديل الوضع</button>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h2>دكتور عوض الفرجاني</h2>
-        <p>أخصائي علاج الإدمان وإعادة التأهيل، مع خبرة طويلة في تقديم برامج فردية وجماعية وأسَرية لتعافي المرضى.</p>
-        <a href="#sessions" class="btn">اطلع على جلسات العلاج</a>
+<section class="hero hero-full">
+    <div class="hero-overlay">
+        <!-- أيقونة الهاتف في النص -->
+        <a href="tel:+201028597384" class="phone-icon">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- زرار الجلسات تحت يمين -->
     </div>
 </section>
+
+
+<div class="social-icons hero-social" style="text-align: center; margin: 20px 0;">  
+      <a href="https://wa.me/message/XUGHEAPBL2KYJ1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <a href="https://www.facebook.com/Drawad60" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/YourProfile" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/drawad60?igsh=MTNjbjUwa3NsZWtsbg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@dr.awad58?_t=ZS-8yvlvKmytmu&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <!-- صور -->
+<div id="carouselExampleIndicators" class="carousel gallery" data-bs-ride="carousel">
+  <!-- نقاط التنقل -->
+  <div class="carousel-indicators">
+    <!-- هنعمل 15 نقطة -->
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="13"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="14"></button>
+  </div>
+  <!-- الصور -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.38 PM (1).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 1">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.38 PM.jpeg" class="d-block w-100" style="height: auto;" alt="صورة 2">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.39 PM (1).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 3">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.39 PM (2).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 4">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.39 PM (3).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 5">
+    </div>
+ 
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.39 PM.jpeg" class="d-block w-100" style="height: auto;" alt="صورة 7">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM (1).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 8">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM (2).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 9">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM (3).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 10">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM (4).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 11">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM (5).jpeg" class="d-block w-100" style="height: auto;" alt="صورة 12">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.49.40 PM.jpeg" class="d-block w-100" style="height: auto;" alt="صورة 13">
+    </div>
+    <div class="carousel-item">
+      <img src="WhatsApp Image 2025-08-16 at 7.53.55 PM.jpeg" class="d-block w-100" style="height: auto;" alt="صورة 14">
+    </div>
+   
+  </div>
+
+  <!-- أزرار التنقل -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+  <!-- النص -->
+  <div class="content" id="textContent">
+    <h2>مجموعة مصحات نيو لايف : رحلة شفاء متكاملة من الإدمان نحو الإستقرار النفسي والإجتماعي</h2>
+    <p>
+      في معاناة الإدمان، حيث تسيطر المادة على الجسد والنفس، تبرز مصحة نيو لايف النفسية كملاذ آمن ومركز متكامل للعلاج والرعاية الداخلية. ندرك أن رحلة التعافي تبدأ بخطوة حاسمة وصعبة: سحب السموم من الجسم بأمان وكرامة.
+    </p>
+    <h3>مرحلة سحب السموم (الديتوكس): الأساس الآمن للشفاء</h3>
+    <p>لا نترك مرضانا يواجهون أعراض الانسحاب المؤلمة والمقلقة وحدهم. تحت إشراف فريق طبي متخصص على مدار الساعة تتم عملية سحب السموم داخل أجنحتنا المريحة والمجهزة بأحدث التقنيات. نقدم:</p>
+    <ul>
+      <li>تقييمًا طبيًا ونفسيًا شاملاً</li>
+      <li>بروتوكولات دوائية فردية</li>
+      <li>دعم تمريضي مستمر</li>
+      <li>بيئة آمنة ومحتوية</li>
+    </ul>
+    <h3>ما بعد السحب: رعاية داخلية شاملة للجسد والعقل والروح</h3>
+    <ul>
+      <li>العلاج النفسي الفردي</li>
+      <li>العلاج الجماعي</li>
+      <li>العلاج السلوكي المعرفي (CBT)</li>
+      <li>العلاج الأسري</li>
+      <li>الأنشطة الترفيهية والتأهيلية</li>
+      <li>التثقيف الصحي</li>
+      <li>التخطيط لما بعد الخروج</li>
+    </ul>
+    <h3>لماذا الرعاية الداخلية في "مصحة نيو لايف"؟</h3>
+    <ul>
+      <li>التركيز الكامل على التعافي</li>
+      <li>بيئة خالية من المواد</li>
+      <li>دعم متواصل 24/7</li>
+      <li>برنامج مكيف حسب الاحتياجات</li>
+      <li>الخصوصية والاحترام</li>
+    </ul>
+    <p>
+      في مصحة الأمل للصحة النفسية ، نسير معك خطوة بخطوة، بدءًا من تخليص جسدك من السموم بأمان، وصولاً إلى استعادة صحتك النفسية وإعادة بناء حياتك على أسس متينة من القوة والوعي والسلام الداخلي. لأن التعافي ليس مجرد توقف عن التعاطي، بل هو ولادة جديدة.
+    </p>
+  </div>
+
+  <!-- زر -->
+  <button class="toggle-btn" id="toggleBtn">عرض المزيد</button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="video-container">
+  <video controls>
+    <source src="WhatsApp Video 2025-08-16 at 5.38.28 PM.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+</div>
+
+
+
+
+<div class="video-container">
+  <video controls>
+    <source src="WhatsApp Video 2025-08-16 at 9.13.01 PM.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="therapy-sessions" class="therapy-section">
+  <div class="container">
+    <h2 class="section-title">جلسات العلاج النفسي: رحلة نحو الاستقرار الداخلي واستعادة التوازن</h2>
+    
+    <!-- المحتوى اللي هيظهر جزء منه -->
+    <div class="content-wrapper">
+      <div class="content">
+        <p>
+          في رحلتنا عبر تعقيدات الحياة، قد تصبح الأعباء النفسية ثقيلةً لدرجة تعيق قدرتنا على العيش بسلام.
+          هنا تبرز جلسات العلاج النفسي كجسر آمن نحو الفهم والشفاء، حيث يقدمها <strong>دكتور عوض الفرجاني</strong>
+          لمساعدتك على مواجهة الاضطرابات النفسية وإعادة اكتشاف قواك الداخلية.
+        </p>
+
+        <h3>ما الذي تقدمه الجلسات النفسية؟</h3>
+        <ul>
+          <li>استكشاف جذور المعاناة: من خلال حوار عميق يركز على فهم تاريخك الشخصي، أنماط تفكيرك، وتجاربك المؤثرة.</li>
+          <li>تطوير أدوات التكيف: لمواجهة القلق، الاكتئاب، الصدمات، الوسواس القهري، واضطرابات المزاج وغيرها.</li>
+          <li>بناء الوعي الذاتي: لفك شفرة مشاعرك وسلوكياتك، وتحويل التحديات إلى فرص للنمو.</li>
+        </ul>
+
+        <h3>كيف تجري الجلسات؟</h3>
+        <ol>
+          <li><strong>التقييم الشامل:</strong> 
+            <ul>
+              <li>تحليل الأعراض وتاريخها.</li>
+              <li>تحديد نقاط القوة والتحديات.</li>
+              <li>وضع خطة علاجية مخصصة تناسب احتياجاتك.</li>
+            </ul>
+          </li>
+          <li><strong>التقنيات العلاجية المُستخدمة:</strong> 
+            <ul>
+              <li>العلاج السلوكي المعرفي (CBT).</li>
+              <li>العلاج التحليلي.</li>
+              <li>العلاج الجدلي السلوكي (DBT).</li>
+              <li>تقنيات الاسترخاء: كالتنفس العميق والتأمل.</li>
+            </ul>
+          </li>
+          <li><strong>الجلسات الجماعية أو الفردية:</strong> 
+            <ul>
+              <li><strong>الفردية:</strong> تركيز كامل على تجربتك الشخصية.</li>
+              <li><strong>الجماعية:</strong> تبادل الدعم وتعلم مهارات التواصل.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>لماذا تختلف جلسات العلاج النفسي لدينا؟</h3>
+        <ul>
+          <li>السرية التامة.</li>
+          <li>العلاج "المُدار بالأدلة".</li>
+          <li>العلاقة العلاجية: قائمة على الثقة والاحترام.</li>
+        </ul>
+
+        <h3>مدة الجلسات وتكرارها:</h3>
+        <ul>
+          <li>الجلسة الواحدة: 45–60 دقيقة.</li>
+          <li>التكرار: أسبوعي أو نصف شهري حسب الحاجة.</li>
+          <li>الرحلة العلاجية: قد تمتد لأسابيع أو أشهر.</li>
+        </ul>
+
+        <blockquote>
+          "العلاج النفسي ليس علامة ضعف، بل شجاعة لمواجهة أعماقك.
+          كل جلسة خطوة تُقرِّبك من حياة لا تسيطر فيها الأعراض على وجودك، بل تُصبح أنت قائد رحلتك."
+        </blockquote>
+
+        <p>
+          إذا كنت تشعر أن الظلام يطغى على نورك الداخلي، فاعلم أن طرقًا للخروج موجودة.
+          جلسات العلاج النفسي ليست "رفاهية" – بل استثمار في إنسانيتك، وصحة لا تقل أهمية عن جسدك.
+          <strong>اتخذ الخطوة الأولى: فاستعادة سلامك النفسي يستحق.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- زر عرض المزيد -->
+    <button class="read-more-btn" onclick="toggleContent()">عرض المزيد</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="family-therapy" class="family-therapy-section">
+  <div class="container">
+    <h2 class="section-title">جلسات العلاج النفسي الأسري والزوجي: استعادة التواصل وبناء جسور الثقة</h2>
+    
+    <!-- المحتوى اللي هنخفي جزء منه -->
+    <div class="family-wrapper">
+      <div class="family-content">
+        <p>
+          في قلب العلاقات الأسرية الناجحة يكمن التواصل الصحي و الفهم المتبادل، لكن قد تتراكم التحديات فتُحدث شرخًا بين الأزواج أو أفراد العائلة.
+          هنا تبرز جلسات العلاج النفسي المتخصصة كمنارة لإصلاح الروابط واستعادة الاستقرار العاطفي،
+          تحت إشراف مختص نفسي مؤهل في العلاج الأسري والزوجي <strong>دكتور عوض الفرجاني</strong>.
+        </p>
+
+        <h3>لماذا تلجأ الأسر والأزواج للجلسات النفسية؟</h3>
+        <ul>
+          <li>الصراعات المستمرة حول المسؤوليات، التربية، أو المال.</li>
+          <li>انعدام الثقة أو آثار الخيانة الزوجية.</li>
+          <li>صعوبة التواصل (الصمت، الانفجار العاطفي، سوء الفهم).</li>
+          <li>التباعد العاطفي وفقدان المشاعر.</li>
+          <li>تأثير الضغوط الخارجية (العمل، الصحة، العلاقات مع الأهل).</li>
+        </ul>
+
+        <h3>كيف تُجرى الجلسات؟</h3>
+        <ol>
+          <li><strong>التقييم الشامل:</strong>
+            <ul>
+              <li>تحليل ديناميكيات العلاقة وتاريخ المشكلات.</li>
+              <li>تحديد أنماط التفاعل السلبية (النقد، الدفاعية، التجنب).</li>
+              <li>فهم أدوار كل فرد واحتياجاته غير المعلنة.</li>
+            </ul>
+          </li>
+          <li><strong>أنماط الجلسات حسب الاحتياج:</strong>
+            <ul>
+              <li>جلسات زوجية: تركيز على تحسين الحوار وإدارة الخلافات.</li>
+              <li>جلسات أسرية كاملة: لمعالجة صراعات الأخوة أو انهيار السلطة الوالدية.</li>
+              <li>جلسات فردية مكملة: لمساعدة شخص على التعبير عن مشاعره بفعالية.</li>
+            </ul>
+          </li>
+          <li><strong>تقنيات علاجية مُثبتة:</strong>
+            <ul>
+              <li>العلاج النسقي (Systemic Therapy).</li>
+              <li>تنمية مهارات التواصل (تقنية "أنا" بدل "أنت").</li>
+              <li>إدارة الغضب.</li>
+              <li>إعادة بناء الثقة بخطوات عملية وشفافة.</li>
+              <li>وضع حدود صحية بين الزوجين أو مع الأهل الخارجيين.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>فوائد الجلسات النفسية للعلاقات:</h3>
+        <ul>
+          <li>إخراج المشاعر المكبوتة بأمان بوجود وسيط محايد.</li>
+          <li>كسر الحلقات السلبية (مثل: هجوم → دفاع → صمت).</li>
+          <li>اكتشاف الجذور الخفية للمشكلات (صدمات قديمة، توقعات غير واقعية).</li>
+          <li>تطوير لغة مشتركة تعزز التقارب بدل التباعد.</li>
+          <li>منع تفاقم الأزمات التي قد تؤدي للانفصال أو تفكك الأسرة.</li>
+        </ul>
+
+        <blockquote>
+          "العلاج الأسري ليس اعترافًا بالفشل، بل شجاعة لقول: 'بيتنا يستحق أن نسعى للتغيير'."
+        </blockquote>
+
+        <h3>مدة العلاج وتكراره:</h3>
+        <ul>
+          <li>الجلسة: 60–90 دقيقة (للسماح بمشاركة جميع الأطراف).</li>
+          <li>التكرار: أسبوعي أو نصف شهري.</li>
+          <li>المدة الإجمالية: تختلف حسب تعقيد المشكلة (من ٨ جلسات إلى عدة أشهر).</li>
+        </ul>
+
+        <p>
+          إذا كانت الخلافات تُحوّل بيتكم إلى ساحة معركة، أو إذا تحول الصمت إلى جدار يفصلكم عن بعضكم،
+          فاعلموا أن جلسات العلاج النفسي الأسري والزواجي ليست رفاهية، بل استثمار في سلامة أسرتك واستمرارها.
+          بداية الرحلة قد تكون صعبة، لكن كل جلسة تقرّبكم من علاقة أقوى وأكثر مرونة أو الخروج الآمن من علاقة غير صحية أو سامة.
+        </p>
+
+        <blockquote>
+          "الأسرة ليست خلوة من العواصف، بل سفينة نصلح أشرعتها معًا كي تبحر."
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- زر عرض المزيد -->
+    <button class="family-btn" onclick="toggleFamily()">عرض المزيد</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section class="features" id="features">
     <div class="feature-card">
@@ -286,34 +1011,26 @@ footer {
     <h2>تفاصيل جلسات العلاج</h2>
     <div class="session-cards">
         <div class="session-card">
-            <i class="fas fa-user"></i>
-            <h3>العلاج الفردي</h3>
-            <p>جلسات فردية مع المريض لتقييم حالته ووضع خطة علاجية شخصية.</p>
-            <p><strong>السعر:</strong> 500 جنيه/جلسة</p>
+<img src="WhatsApp Image 2025-08-16 at 7.37.16 PM.jpeg" alt="">            <h3>العلاج الفردي</h3>
+            <p>جلسات فردية مع المريض لتقييم حالته ووضع خطة علاجية شخصية للأضطرابات النفسيه والمشاكل السلوكيه .</p>
         </div>
         <div class="session-card">
-            <i class="fas fa-users"></i>
-            <h3>العلاج الجماعي</h3>
+<img src="zjledtdosaf21_article.webp" alt="">            <h3>العلاج الجماعي</h3>
             <p>جلسات جماعية لدعم المرضى وتشجيعهم على التفاعل والتواصل الاجتماعي.</p>
-            <p><strong>السعر:</strong> 300 جنيه/جلسة لكل شخص</p>
         </div>
         <div class="session-card">
-            <i class="fas fa-home"></i>
-            <h3>العلاج الأسري</h3>
-            <p>جلسات مع أفراد الأسرة لدعم المريض وتوجيه الأسرة في التعامل مع الإدمان.</p>
-            <p><strong>السعر:</strong> 700 جنيه/جلسة</p>
+<img src="WhatsApp Image 2025-08-16 at 7.36.26 PM.jpeg" alt="">            <h3>العلاج الأسري والزواجى</h3>
+            <p>جلسات مع أفراد الأسرة لدعم المريض وتوجيه الأسرة في التعامل مع العلاقات الاسريه والزاجيه والوصول للسعاده الزوجيه.</p>
         </div>
         <div class="session-card">
-            <i class="fas fa-heartbeat"></i>
-            <h3>علاج الإدمان</h3>
-            <p>برنامج شامل لإزالة السموم وإعادة التأهيل النفسي والبدني.</p>
-            <p><strong>السعر:</strong> 5000 جنيه/البرنامج كامل</p>
+<img src="WhatsApp Image 2025-08-16 at 7.35.20 PM.jpeg" alt="">            <h3>علاج الإدمان</h3>
+            <p>برنامج شامل لإزالة السموم وإعادة التأهيل النفسي والبدني مع المتابعه الطبيه والنفسيه والتمريض وجلسات العلاج النفسى.</p>
         </div>
     </div>
 </section>
 
 <section class="timeline">
-    <h2>مراحل العلاج</h2>
+    <h2>مراحل التعافى من الادمان</h2>
     <div class="timeline-container">
         <div class="timeline-item">
             <h3>المرحلة الأولى: التقييم</h3>
@@ -338,16 +1055,73 @@ footer {
     <h2>آراء المرضى</h2>
     <div class="testimonial-cards">
         <div class="testimonial-card">
-            <p>"برنامج رائع، شعرت بدعم كبير من الفريق الطبي."</p>
-            <h4>أحمد محمد <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+            <p>"والله كنت ضايع في عالم المخدرات لحد ما ربنا وفقني ل دكاترة نيو لايف. العلاج كان صعب شوية بس الدعم النفسي اللي معاهم خلاني أتمسك. الحمدلله سنتين ملمستش مخدر."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
         </div>
         <div class="testimonial-card">
-            <p>"بيئة آمنة ومحترفة جعلتني أعود للحياة بشكل أفضل."</p>
-            <h4>سارة علي <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+            <p>"بحس إني عايش تاني بجد. كنت في حالة اكتئاب وحاولت حتى أخلص على نفسي. العلاج النفسي والجلسات عندهم في نيو لايف غيروا حياتي. الدكاترة متخصصين جداً والجو مريح."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"جوزي وأنا كنا بنتخانق على أتفه الأسباب وخلاص جلسات الزواج في نيو لايف علمتنا إزاي نسمع لبعض بجد ونحل مشاكلنا من جذورها. الحمدلله جو البيت اتحول."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"ابني كان ضائع في الإدمان وكل أملنا كان ضعيف. مركز نيو لايف ربنا بعته لينا. العلاج متكامل نفسي ودوائي ودعم العيلة كمان. الحمدلله ابننا رجع لطبيعته وبنحارب عشان مايرجعش تاني."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"بقالي سنين أعاني من نوبات هلع وكنت بخاف أروح لدكتور نفسي. نيو لايف مختلف، الدكتورة بتفهم جداً وبتحسسني بأمان. الأدوية والكلام اللي بينا خلى النوبات تقل بكتير جداً."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"نيو لايف فعلاً بيعملوا حياة جديدة للناس. المكان نظيف وهادئ والدكاترة على أعلى مستوى من الاحترافية والتخصص. مفيش حاجة اسمها كلام عام، كل حالة وليها خطة."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"السرية التامة عندهم شيء يطمئن. بتكلم بكل راحة من غير ما أخاف. الدكاترة بيهتموا بالتفاصيل الصغيرة وبيسألوا كويس جداً عشان يوصلوا للسبب الحقيقي."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"لو حد في دايرتي محتاج دعم نفسي أو علاج إدمان أو حتى حل مشاكل أسرية، مش هتاني أشير عليه غير ب نيو لايف. خبرتهم وتجربتهم مختلفة."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"اكنت محتاجة مكان آمن ومتخصص يفهم طبيعة مشكلتي كست. نيو لايف كان هو الحل، الدكاترة والطاقم محترمين جداً ومفيش أحكام."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"نيو لايف مش مركز علاج هو مكان لاستعادة الحياة. سواء من الإدمان أو من المشاكل الزوجية أو من أي ألم نفسي، الدعم اللي بتلاقيه هنا بيخليك تقدر تواجه وتتخطى."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"كنت على وشك الطلاق بصراحة، وجربنا كذا مكان قبل كده بس لما جينا نيو لايف الدكتور عوض فاهم المشاكل بين الرجالة والستات جداً. خلانا نفتح كلام كنا متخافين منه، ودلوقتي علاقتي بمراتي أحسن بكتير."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"جالي كبت من مراتي وكنت عصبي جداً في البيت. الدكتور في نيو لايف خدني من إيدي وعلمني أزاي أتعامل وأفهم مشاعرها. الموضوع كان أبعد من كبت عادي."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"القلق كان مسيطر عليا ومش قادر أركز في شغلي. جربت نيو لايف عن طريق صاحبي. الجلسات والبرنامج اللي اتعملي خلوني أسيطر على الموضوع والحمدلله حياتي بقت أهدى."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"أهلي هم اللي جابوني هنا وأنا كنت معترض. الحقيقة إنهم صح. الدكاترة عندهم خبرة كبيرة في الإدمان ومفيش أحكام. خرجت من الدنيا دي ولسة بتابع عشان أتأكد."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"بقالي فترة بحس بضيق في الصدر وقلق من غير سبب. الدكتور عوض في نيو لايف فتح معايا مواضيع قديمة ماكنتش متخيل إنها مؤثرة كده. بحس بفرق كبير ولسه مستمر."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"جلسات الزواج في نيو لايف علمتنا إزاي نبني حياتنا الزوجيه صح."</p>
+            <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
         </div>
     </div>
     <a href="docsuc.html">تعرف علينا</a>
 </section>
+
 
 <section class="faq">
     <h2>الأسئلة الشائعة</h2>
@@ -362,14 +1136,8 @@ footer {
 </section>
 
 <footer>
-    <p>جميع الحقوق محفوظة © 2025 - مركز عوض لعلاج الإدمان</p>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/YourProfile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/YourProfile" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/YourProfile" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://wa.me/YourNumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.tiktok.com/@YourProfile" target="_blank"><i class="fab fa-tiktok"></i></a>
-    </div>
+    <p>جميع الحقوق محفوظة © 2025 - مركز نيو لايف لعلاج الإدمان</p>
+   
 </footer>
 
 <script>
@@ -387,7 +1155,45 @@ faqItems.forEach(item => {
         p.style.display = p.style.display === 'block' ? 'none' : 'block';
     });
 });
+  const btn = document.getElementById("toggleBtn");
+  const content = document.getElementById("textContent");
+
+  btn.addEventListener("click", () => {
+    content.classList.toggle("show");
+    if(content.classList.contains("show")){
+      btn.textContent = "عرض أقل";
+    } else {
+      btn.textContent = "عرض المزيد";
+    }
+  });
+
+  function toggleContent() {
+  const wrapper = document.querySelector('.content-wrapper');
+  const btn = document.querySelector('.read-more-btn');
+  
+  wrapper.classList.toggle('show');
+  
+  if (wrapper.classList.contains('show')) {
+    btn.textContent = "عرض أقل";
+  } else {
+    btn.textContent = "عرض المزيد";
+  }};
+
+  
+function toggleFamily() {
+  const wrapper = document.querySelector('.family-wrapper');
+  const btn = document.querySelector('.family-btn');
+  
+  wrapper.classList.toggle('show');
+  
+  if (wrapper.classList.contains('show')) {
+    btn.textContent = "عرض أقل";
+  } else {
+    btn.textContent = "عرض المزيد";
+  }
+}
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
