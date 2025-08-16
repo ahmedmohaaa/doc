@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بورتفوليو الدكتور عوض الفرجاني</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* الصورة الرئيسية */
+    .main-image img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* الصور الفرعية */
+    .sub-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .sub-images img {
+      width: calc(25% - 15px);
+      border-radius: 10px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .sub-images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* النبذة */
+    .bio {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: right;
+    }
+
+    .bio h2 {
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    .bio h3 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .bio-content {
+      max-height: 300px; /* يخفي النص الطويل */
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .bio-content.show {
+      max-height: 2000px; /* يفتح النص بالكامل */
+    }
+
+    .toggle-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 25px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background-color: #1e7e34;
+    }
+
+    /* استجابة الهواتف */
+    @media (max-width:768px){
+      .sub-images img {
+        width: calc(50% - 10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- الصورة الرئيسية -->
+    <div class="main-image">
+      <img src="doctor.jpeg" alt="الدكتور عوض الفرجاني">
+    </div>
+
+    <!-- الصور الفرعية -->
+    <div class="sub-images">
+      <img src="about1.jpeg" alt="صورة فرعية 1">
+      <img src="about2.jpeg" alt="صورة فرعية 2">
+      <img src="about3.jpeg" alt="صورة فرعية 3">
+      <img src="about4.jpeg" alt="صورة فرعية 4">
+    </div>
+
+    <!-- النبذة -->
+    <div class="bio">
+      <h2>الدكتور / عوض الفرجاني</h2>
+      <h3>اختصاصي نفسي وعلاج الإدمان</h3>
+
+      <div class="bio-content" id="bioContent">
+        <p>حاصل على ماجستير في العلاج النفسي، والذي يتمتع بسجل أكاديمي ومهني حافل في مجال الصحة النفسية وعلاج الإدمان بمصر.</p>
+
+        <h4>المؤهلات الأكاديمية والتخصصية:</h4>
+        <ul>
+          <li>ماجستير في العلاج النفسي.</li>
+          <li>دبلومة علاج الإدمان المشتركة بين جامعة القاهرة وصندوق مكافحة وعلاج الإدمان.</li>
+          <li>دبلوم العلاج الزواجي والأسري من جامعة القاهرة.</li>
+        </ul>
+
+        <h4>الخبرة العملية والمهنية:</h4>
+        <ul>
+          <li>خبرة في التعامل مع المرضى النفسيين في مستشفيات ومصحات رائدة مثل القصر العيني وعين شمس.</li>
+          <li>عيادة خاصة رئيسية في مصر الجديدة (القاهرة).</li>
+          <li>عيادة فرعية في الإسكندرية.</li>
+          <li>المدير العام لمركز "نيو لايف" المتخصص في علاج الإدمان.</li>
+        </ul>
+
+        <h4>مجالات التميز:</h4>
+        <ul>
+          <li>الخبرة الإكلينيكية العميقة.</li>
+          <li>التخصص الدقيق في العلاج النفسي الفردي، الإدمان، والأسري والزواجي.</li>
+          <li>التواجد الخدمي المتميز في القاهرة والإسكندرية.</li>
+          <li>الجمع بين الأكاديميا والممارسة العملية.</li>
+        </ul>
+
+        <p>باختصار، يمثل الدكتور عوض الفرجاني نموذجًا للمتخصص النفسي المؤهل أكاديميًا والمتمرس عمليًا، الذي يقدم رعاية نفسية شاملة وعلاجًا متخصصًا للإدمان عبر قنوات متعددة، مستندًا إلى خبرة ثرية في أعرق المؤسسات الطبية المصرية.</p>
+      </div>
+
+      <button class="toggle-btn" id="toggleBio">عرض المزيد</button>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBio');
+    const bioContent = document.getElementById('bioContent');
+
+    toggleBtn.addEventListener('click', () => {
+      bioContent.classList.toggle('show');
+      toggleBtn.textContent = bioContent.classList.contains('show') ? "عرض أقل" : "عرض المزيد";
+    });
+  </script>
+
+</body>
+</html>
