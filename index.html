@@ -632,11 +632,23 @@ body.dark-mode .family-therapy-section{
 
 
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.t{
+    text-align: center;
+    margin-top: 8px;
+}
 
-
-
-
-
+.a{
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+}
 
 /* Responsive */
 @media (max-width:768px){
@@ -674,16 +686,17 @@ body.dark-mode .family-therapy-section{
 <body>
 
 <header>
-    <h1>مركز نيو لايف لعلاج الإدمان</h1>
+    <h1>مركز نيو لايف لعلاج الإدمان</h1><div class="to">
     <button class="mode-toggle" id="modeToggle">تبديل الوضع</button>
+      <a href="tel:+201028597384" class="phone-icon">
+            <i class="fas fa-phone"></i>
+        </a></div>
 </header>
 
 <section class="hero hero-full" id="hero">
     <div class="hero-overlay">
         <!-- أيقونة الهاتف في النص -->
-        <a href="tel:+201028597384" class="phone-icon">
-            <i class="fas fa-phone"></i>
-        </a>
+      
 
         <!-- زرار الجلسات تحت يمين -->
     </div>
@@ -1307,8 +1320,9 @@ body.dark-mode .family-therapy-section{
             <h4> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
         </div>
     </div>
-    <a href="#hero">تعرف علينا</a>
+    <a href="#hero">تواصل معنا</a>
 </section>
+     <div class="t">   <a href="docsuc.html" class="a">انجازاتنا</a></div>
 
 
 <section class="faq">
