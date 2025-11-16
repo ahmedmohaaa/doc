@@ -3,153 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقالات - رحلة الاستكشاف والتعافي من الإدمان</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-green: #4CAF50;
-            --secondary-green: #66BB6A;
-            --primary-purple: #7B1FA2;
-            --light-bg: #f5f6f8;
-            --dark-bg: #1e1e1e;
-            --card-bg: #ffffff;
-            --card-dark-bg: #2a2a2a;
-            --text-color: #333;
-            --text-light: #eee;
-            --light-text: #666;
-            --border-color: #ddd;
-        }
+    <title>فهم الإدمان وعلاجه - مركز نور التعافي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <style>
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.7;
-            transition: all 0.3s;
-        }
-
-        body.dark-mode {
-            background: var(--dark-bg);
-            color: var(--text-light);
+            background: #f3fbf3;
+            line-height: 1.8;
         }
 
         header {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+            background: #0f6d3c;
+            padding: 15px;
             color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        .dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            font-size: 1.8rem;
-            cursor: pointer;
+        header a {
             color: white;
-            z-index: 1000;
-        }
-
-        .article-container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
-        }
-
-        body.dark-mode .article-container {
-            background: var(--card-dark-bg);
-        }
-
-        .article-container img {
-            width: 100%;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            object-fit: cover;
-        }
-
-        .article-container h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--primary-purple);
-        }
-
-        .article-container h3 {
-            margin-top: 30px;
-            color: var(--primary-green);
-        }
-
-        .article-container p {
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-
-        body.dark-mode .article-container p {
-            color: var(--text-light);
-        }
-     header a{
-            color: #fff;
             text-decoration: none;
-            font-size: large;
+            background: #0c572f;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 14px;
         }
-        @media (max-width:768px) {
-            header h1 { font-size:2rem; }
-            .article-container h2 { font-size:1.5rem; }
+
+        .page-header {
+            width: 100%;
+            max-height: 350px;
+            overflow: hidden;
+        }
+
+        .page-header img {
+            width: 100%;
+            display: block;
+        }
+
+        .content-container {
+            width: 92%;
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h1, h2 {
+            color: #0f6d3c;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        p, li {
+            font-size: 17px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p, li {
+                font-size: 16px;
+            }
         }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <i class="fas fa-moon dark-mode-toggle" id="toggle-dark"></i>
 
+<body>
+
+    <!-- الهيدر مع زر العودة -->
     <header>
-        <h1>مقالات التعافي من الإدمان</h1>
-        <p>دليلك الشامل لفهم رحلة الإدمان والتعافي</p>
-        <a href="index.html">العوده للرئيسيه</a>
+        <h3>مراكز نور التعافي</h3>
+        <a href="index.html">العودة للصفحة الرئيسية</a>
     </header>
 
-    <div class="article-container">
-        <img src="man-stress-out-cover-his-face-by-his-hands-scaled.jpg" alt="التعافي من الإدمان">
-        <h2>رحلة الاستكشاف والتعافي من الإدمان</h2>
-        <p>بسم الله الرحمن الرحيم، السادة أولياء أمور وأسر مرضى الإدمان، أرحب بكم في هذا المساحة الآمنة، وأشكركم على اهتمامكم وحرصكم على فهم ما يمر به أحباؤكم. أنا د. [عوض الفرجاني]، أخصائي نفسي متخصص في علاج الإدمان، وكتبت هذا المقال الشامل خصيصاً لكم، لأنني أؤمن بأن الأسرة هي حجر الأساس في رحلة العلاج والشفاء...</p>
-        <h3>الباب الأول: فهم العدو – ما هو الإدمان حقاً؟</h3>
-        <p>يخطئ الكثيرون عندما يعتبرون الإدمان مجرد "ضعف في الشخصية" أو "قلة إرادة" أو "خلل أخلاقي"...</p>
-        <h3>الباب الثاني: علامات الإنذار – كيف نكتشف المشكلة مبكراً؟</h3>
-        <p>قد تبدأ الرحلة بفضول أو تجربة عابرة، ثم تتحول إلى اعتماد. إليكم العلامات التحذيرية...</p>
-        <h3>الباب الثالث: رحلة العلاج – ليست خطوة واحدة، بل رحلة متكاملة</h3>
-        <p>علاج الإدمان ليس مجرد "تطهير" للجسم من المادة. إنها رحلة شاملة ومتعددة المراحل...</p>
-        <h3>الباب الرابع: دوركم كأهل – كيف تدعمون دون أن تمكنوا؟</h3>
-        <p>هذا هو الجزء الأكثر حساسية. دعمكم حيوي، ولكن الدعم الخاطئ قد يتحول إلى "تمكين" يستمر معه المرض...</p>
-        <h3>الباب الخامس: الانتكاسة – ليست نهاية العالم، بل منعطف في الطريق</h3>
-        <p>يجب أن نتعامل مع الواقع بصراحة: الانتكاس (العودة للتعاطي) هو احتمال قائم ويحدث لدى نسبة كبيرة من المرضى...</p>
-        <h3>خاتمة: رسالة أمل</h3>
-        <p>عزائي الأهالي، رحلة علاج الإدمان طويلة وشاقة ومليئة بالتحديات. ستشعرون بالتعب والإحباط والغضب أحياناً. هذا طبيعي. ولكن تذكروا دائماً: الشفاء ممكن. ابحثوا عن مركز علاجي موثوق، توكلوا على الله، وابدؤوا الرحلة الآن.</p>
+    <!-- صورة الهيدر -->
+    <div class="page-header">
+        <img src="man-stress-out-cover-his-face-by-his-hands-scaled.jpg" alt="الإدمان">
     </div>
 
-    <script>
-        const toggleDark = document.getElementById('toggle-dark');
-        toggleDark.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if(document.body.classList.contains('dark-mode')) {
-                toggleDark.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                toggleDark.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
-    </script>
+    <!-- المقال -->
+    <div class="content-container">
+
+        <h1>فهم الإدمان وعلاجه – دليل شامل للأهالي</h1>
+
+        <p>بسم الله الرحمن الرحيم  
+السادة أولياء أمور وأسر مرضى الإدمان،  
+أرحب بكم في هذا المساحة الآمنة، وأشكركم على اهتمامكم وحرصكم على فهم ما يمر به أحباؤكم. أنا د. [عوض الفرجاني]، أخصائي نفسي متخصص في علاج الإدمان، وكتبت هذا المقال الشامل خصيصاً لكم، لأنني أؤمن بأن الأسرة هي حجر الأساس في رحلة العلاج والشفاء.</p>
+
+        <p>ما ستقرؤونه طويل ومفصل عن قصد، لأن الإدمان مرض معقد، ويستحق منا الفهم العميق. لن يكون مجرد سرد للمعلومات، بل سيكون دليلاً يعينكم على فهم الرحلة من البداية إلى النهاية.</p>
+
+        <h2>الباب الأول: فهم العدو – ما هو الإدمان حقاً؟</h2>
+
+        <p>يخطئ الكثيرون عندما يعتبرون الإدمان مجرد "ضعف في الشخصية" أو "قلة إرادة". من الناحية العلمية، الإدمان هو مرض دماغي مزمن يغير بنية الدماغ وكيميائه، وخاصة في المراكز المسؤولة عن:</p>
+
+        <ul>
+            <li>المكافأة</li>
+            <li>التعلم والذاكرة</li>
+            <li>التحكم في الانفعالات</li>
+        </ul>
+
+        <p>هذه التغيرات تجعل الشخص يستمر في التعاطي رغم معرفته بالعواقب. إنه ليس مجرد اختيار، بل هو حالة مرضية معقدة.</p>
+
+        <h2>الوصم والعار: حاجز يجب هدمه</h2>
+        <p>الوصم الاجتماعي هو أحد أكبر العقبات التي تمنع العلاج. الإدمان مرض وليس عاراً.</p>
+
+        <h2>الباب الثاني: علامات الإنذار – كيف نكتشف المشكلة مبكراً؟</h2>
+
+        <h3>1. علامات جسدية:</h3>
+        <ul>
+            <li>تغيرات في العينين</li>
+            <li>اضطرابات النوم</li>
+            <li>فقدان الوزن</li>
+            <li>إهمال المظهر</li>
+            <li>رعشة اليدين</li>
+            <li>علامات الحقن</li>
+        </ul>
+
+        <h3>2. علامات سلوكية ونفسية:</h3>
+        <ul>
+            <li>تغير الأصدقاء</li>
+            <li>إهمال المسؤوليات</li>
+            <li>مشاكل مالية</li>
+            <li>الكذب والسرية</li>
+            <li>تقلبات مزاجية</li>
+        </ul>
+
+        <h3>3. علامات متعلقة بالمادة:</h3>
+        <ul>
+            <li>وجود أدوات التعاطي</li>
+            <li>وجود مواد غريبة</li>
+        </ul>
+
+        <h2>الباب الثالث: رحلة العلاج – ليست خطوة واحدة، بل رحلة متكاملة</h2>
+
+        <h3>المرحلة الأولى: التقييم والتشخيص</h3>
+        <p>تقييم طبي ونفسي شامل لتحديد خطة العلاج.</p>
+
+        <h3>المرحلة الثانية: سحب السموم</h3>
+        <p>تتم تحت إشراف طبي لتجنب مخاطر أعراض الانسحاب.</p>
+
+        <h3>المرحلة الثالثة: إعادة التأهيل – جوهر العلاج</h3>
+        <ul>
+            <li>العلاج النفسي الفردي</li>
+            <li>العلاج الجماعي</li>
+            <li>العلاج الأسري</li>
+            <li>تنمية المهارات الحياتية</li>
+            <li>العلاج الدوائي عند الحاجة</li>
+        </ul>
+
+        <h3>المرحلة الرابعة: المتابعة ومنع الانتكاس</h3>
+        <p>العلاج لا ينتهي بخروج المريض من المركز، بل يتطلب متابعة مستمرة.</p>
+
+        <h2>الباب الرابع: دور الأسرة – الدعم دون تمكين سلبي</h2>
+
+        <h3>الدعم الإيجابي:</h3>
+        <ul>
+            <li>التعليم والوعي</li>
+            <li>التواصل غير الاتهامي</li>
+            <li>طلب المساعدة الأسرية</li>
+            <li>وضع حدود صحية</li>
+            <li>الفصل بين الشخص والمرض</li>
+        </ul>
+
+        <h3>ما يجب تجنبه:</h3>
+        <ul>
+            <li>إنقاذه من العواقب</li>
+            <li>التستر</li>
+            <li>اللوم والشتائم</li>
+            <li>التهديد الفارغ</li>
+        </ul>
+
+        <h2>الباب الخامس: الانتكاسة – ليست نهاية الرحلة</h2>
+        <p>الانتكاس ليس فشلاً بل علامة على ضرورة تعديل خطة العلاج. المهم هو التدخل السريع وفهم الأسباب.</p>
+
+        <h2>خاتمة: رسالة أمل</h2>
+        <p>رحلة علاج الإدمان طويلة ومليئة بالتحديات، ولكن الشفاء ممكن. دوركم أساسي. ابدأوا الآن وابحثوا عن مركز موثوق يقدم الرعاية المتكاملة.</p>
+
+        <p><strong>د. عوض الفرجاني  
+        أخصائي نفسي إكلينيكي متخصص في علاج الإدمان</strong></p>
+
+    </div>
+
 </body>
 </html>
